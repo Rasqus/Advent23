@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Advent23
+﻿namespace Advent23
 {
-	internal class Day1
+	internal class Day1 : IDay
 	{
-		public static void Star1()
+		public void Star1()
 		{
 			var number = 0;
 
-			var input = File.ReadAllLines("input1star.txt");
+			var input = File.ReadAllLines("day1input.txt");
 
 			foreach (var line in input)
 			{
@@ -25,11 +19,11 @@ namespace Advent23
 
 		}
 
-		public static void Star2()
+		public void Star2()
 		{
 			var number = 0;
 
-			var input = File.ReadAllLines("input1star.txt");
+			var input = File.ReadAllLines("day1input.txt");
 
 			foreach (var line in input)
 			{
