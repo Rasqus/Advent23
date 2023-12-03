@@ -1,4 +1,5 @@
-﻿namespace Advent23
+﻿// ReSharper disable once CheckNamespace
+namespace Advent23
 {
 	internal class Day1 : IDay
 	{
@@ -6,7 +7,7 @@
 		{
 			var number = 0;
 
-			var input = File.ReadAllLines("day1input.txt");
+			var input = File.ReadAllLines("Day1/day1input.txt");
 
 			foreach (var line in input)
 			{
@@ -23,7 +24,7 @@
 		{
 			var number = 0;
 
-			var input = File.ReadAllLines("day1input.txt");
+			var input = File.ReadAllLines("Day1/day1input.txt");
 
 			foreach (var line in input)
 			{
@@ -31,16 +32,16 @@
 				int digit2;
 
 				var firstDigit = line.FirstOrDefault(ch => ch >= '0' && ch <= '9');
-				var firstDigitIndex = firstDigit == 0 ? Int32.MaxValue : line.IndexOf(firstDigit);
+				var firstDigitIndex = firstDigit == 0 ? int.MaxValue : line.IndexOf(firstDigit);
 				List<int> positions = new List<int>(new int[9]);
 				int index;
 
 				for (index = 1; index < 10; index++)
 				{
 					var digit = digitNames[index - 1];
-					positions[index-1] = line.IndexOf(digit, StringComparison.Ordinal);
-					if (positions[index-1] == -1)
-						positions[index-1] = 500000;
+					positions[index - 1] = line.IndexOf(digit, StringComparison.Ordinal);
+					if (positions[index - 1] == -1)
+						positions[index - 1] = 500000;
 				}
 
 				var lowest = positions.Min();
@@ -55,13 +56,13 @@
 					digit1 = int.Parse(firstDigit.ToString());
 
 				var secondDigit = line.LastOrDefault(ch => ch >= '0' && ch <= '9');
-				var secondDigitIndex = secondDigit == 0 ? Int32.MinValue : line.LastIndexOf(secondDigit);
+				var secondDigitIndex = secondDigit == 0 ? int.MinValue : line.LastIndexOf(secondDigit);
 				positions = new List<int>(new int[9]);
 
 				for (index = 1; index < 10; index++)
 				{
 					var digit = digitNames[index - 1];
-					positions[index-1] = line.LastIndexOf(digit, StringComparison.Ordinal);
+					positions[index - 1] = line.LastIndexOf(digit, StringComparison.Ordinal);
 				}
 
 				var highest = positions.Max();
@@ -104,5 +105,5 @@
 
 	}
 
-	
+
 }

@@ -4,8 +4,9 @@
 	{
 		static void Main(string[] args)
 		{
-			// new Day1().Star2();
-			new Day2().Star2();
+			//new Day1().Star2();
+			//new Day2().Star2();
+			new Day3().Star2();
 		}
 	}
 }
