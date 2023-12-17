@@ -16,7 +16,8 @@
 			//new Day10().Star2();
 			//new Day11().Star2();
 			//new Day12().Star2();
-			new Day13().Star2();
+			//new Day13().Star2();
+			new Day14().Star2();
 		}
 	}
 }
